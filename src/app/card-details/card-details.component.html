@@ -1,0 +1,5 @@
+<div class="container">
+    <p *ngFor="let carded of card.steps">{{carded}}</p>
+    <br>
+    <button class="btn btn-warning" type="button" (click)="readComplete(true)">Delete</button>
+</div>

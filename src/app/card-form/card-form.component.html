@@ -1,0 +1,14 @@
+<form class="pb-5">
+    <div class="form-group mt-5">
+        <label for="title">Enter Title</label>
+        <br>
+        <input #title type="text" name="title" id="title">
+    </div>
+    <div class="form-group mt-5">
+        <label for="steps">Enter Step</label>
+        <br>
+        <input #steps type="text" name="steps" id="steps">
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="newItemEvent(title.value, steps.value)">Add Step</button>
+</form>

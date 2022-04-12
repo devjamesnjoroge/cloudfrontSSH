@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="myCard bg-dark w-50 text-white" *ngFor="let card of cards, let i = index" appUpvote>
+        {{card.title}}
+        <app-card-details class="mt-5" *ngIf="card.showDetails" [card]="card" (isRead)="finishDelete($event, i)"></app-card-details>
+        <button class="btn btn-primary mt-5" type="button" (click)="toggleDetails(i)">See Steps</button>
+        <span class="mt-2" (click)="upVote(true, i)">UpVote: {{card.n}}</span>
+
+        <span class="mt-2" (click)="downVote(true, i)">DownVote: {{card.u}}</span>
+    </div>
+</div>
+
+<app-card-form (addNewItem)="addItem($event)"></app-card-form>
